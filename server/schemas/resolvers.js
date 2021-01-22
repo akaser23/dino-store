@@ -8,6 +8,13 @@ const resolvers = {
         users: async () => {
             const users = await User.find();
             return users;
+        },
+        listings: async () => {
+            const listings = await Listing.find();
+            return listings;
+        },
+        listing: async (parent, { _id }) => {
+            return await Listing.findById(_id);
         }
     },
     Mutation: {

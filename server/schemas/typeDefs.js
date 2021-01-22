@@ -21,7 +21,7 @@ const typeDefs = gql`
         firstName: String
         lastName: String
         email: String
-        # listings: [Listing]
+        listings: [Listing]
         # orders: [Order]
     }
 
@@ -32,7 +32,8 @@ const typeDefs = gql`
 
     type Query {
         users: [User]
-        # listings(name: String): [Listing]
+        listings: [Listing]
+        listing(_id: ID!): Listing
         # order(_id: ID!): Order
     }
 
