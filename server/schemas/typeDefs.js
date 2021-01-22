@@ -21,8 +21,8 @@ const typeDefs = gql`
         firstName: String
         lastName: String
         email: String
-        listings: [Listing]
-        orders: [Order]
+        # listings: [Listing]
+        # orders: [Order]
     }
 
     type Auth {
@@ -31,9 +31,9 @@ const typeDefs = gql`
     }
 
     type Query {
-        user: User
-        listings(name: String): [Listing]
-        order(_id: ID!): Order
+        users: [User]
+        # listings(name: String): [Listing]
+        # order(_id: ID!): Order
     }
 
     type Mutation {

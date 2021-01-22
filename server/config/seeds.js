@@ -71,6 +71,24 @@ db.once('open', async () => {
             lastName: 'User',
             email: 'newuser123@gmail.com',
             password: 'password1234'
+        },
+        {
+            firstName: 'New1',
+            lastName: 'User1',
+            email: 'newuser1234@gmail.com',
+            password: 'password1234'
+        },
+        {
+            firstName: 'New2',
+            lastName: 'User2',
+            email: 'newuser12345@gmail.com',
+            password: 'password1234'
+        },
+        {
+            firstName: 'New3',
+            lastName: 'User3',
+            email: 'newuser123456@gmail.com',
+            password: 'password1234'
         }
     );
 
