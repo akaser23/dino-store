@@ -7,56 +7,44 @@ db.once('open', async () => {
 
     const listings = await Listing.insertMany([
         {
-            name: 'Socks',
+            name: 'Dino Socks',
             description: 'A pair of socks, only worn a couple times.',
             image: 'socks.jpg',
             price: 15.99,
             quantity: 1
         },
         {
-            name: 'Socks',
-            description: 'A pair of socks, only worn a couple times.',
-            image: 'socks.jpg',
-            price: 15.99,
+            name: 'Dino Bed',
+            description: 'A bed Rawrrrrr.',
+            image: 'bed.jpg',
+            price: 55.99,
             quantity: 1
         },
         {
-            name: 'Socks',
-            description: 'A pair of socks, only worn a couple times.',
-            image: 'socks.jpg',
-            price: 15.99,
+            name: 'Dino Car',
+            description: 'A car for you and your dino',
+            image: 'car.jpg',
+            price: 1500.99,
             quantity: 1
         },
         {
-            name: 'Socks',
-            description: 'A pair of socks, only worn a couple times.',
-            image: 'socks.jpg',
-            price: 15.99,
+            name: 'Dino Shirt',
+            description: 'A shirt with a dino on it.',
+            image: 'shirt.jpg',
+            price: 20.99,
             quantity: 1
         },
         {
-            name: 'Socks',
-            description: 'A pair of socks, only worn a couple times.',
-            image: 'socks.jpg',
-            price: 15.99,
+            name: 'Dino Balls',
+            description: 'A Basketball and football with dinos.',
+            image: 'balls.jpg',
+            price: 25.99,
             quantity: 1
         },{
-            name: 'Socks',
-            description: 'A pair of socks, only worn a couple times.',
-            image: 'socks.jpg',
-            price: 15.99,
-            quantity: 1
-        },{
-            name: 'Socks',
-            description: 'A pair of socks, only worn a couple times.',
-            image: 'socks.jpg',
-            price: 15.99,
-            quantity: 1
-        },{
-            name: 'Socks',
-            description: 'A pair of socks, only worn a couple times.',
-            image: 'socks.jpg',
-            price: 15.99,
+            name: 'Dino Plate',
+            description: 'Enjoy eating off of your dino plate',
+            image: 'plate.jpg',
+            price: 10.99,
             quantity: 1
         }
     ]);
