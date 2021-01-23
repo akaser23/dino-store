@@ -1,8 +1,20 @@
 const db = require('./connection');
-const { User, Listing, Order} = require('../models');
+const { User, Listing, Category, Order } = require('../models');
 
 db.once('open', async () => {
-    
+    await Category.deleteMany();
+
+    const categories = await Category.insertMany([
+        { name: 'Clothing and Apparel' },
+        { name: 'Home and Garden' },
+        { name: 'Vehicles' },
+        { name: 'Books' },
+        { name: 'Toys' },
+        { name: 'Food' }
+    ]);
+
+    console.log('categories seeded');
+
     await Listing.deleteMany();
 
     const listings = await Listing.insertMany([
@@ -10,6 +22,7 @@ db.once('open', async () => {
             name: 'Dino Socks',
             description: 'A pair of socks, only worn a couple times.',
             image: 'socks.jpg',
+            category: categories[0]._id,
             price: 15.99,
             quantity: 1
         },
@@ -17,6 +30,7 @@ db.once('open', async () => {
             name: 'Dino Bed',
             description: 'A bed Rawrrrrr.',
             image: 'bed.jpg',
+            category: categories[1]._id,
             price: 55.99,
             quantity: 1
         },
@@ -24,6 +38,7 @@ db.once('open', async () => {
             name: 'Dino Car',
             description: 'A car for you and your dino',
             image: 'car.jpg',
+            category: categories[2]._id,
             price: 1500.99,
             quantity: 1
         },
@@ -31,19 +46,22 @@ db.once('open', async () => {
             name: 'Dino Shirt',
             description: 'A shirt with a dino on it.',
             image: 'shirt.jpg',
+            category: categories[0]._id,
             price: 20.99,
             quantity: 1
         },
         {
-            name: 'Dino Balls',
-            description: 'A Basketball and football with dinos.',
-            image: 'balls.jpg',
+            name: 'Dino Ball',
+            description: 'A soccer ball with dinos.',
+            image: 'ball.jpg',
+            category: categories[4]._id,
             price: 25.99,
             quantity: 1
-        },{
+        }, {
             name: 'Dino Plate',
             description: 'Enjoy eating off of your dino plate',
             image: 'plate.jpg',
+            category: categories[5]._id,
             price: 10.99,
             quantity: 1
         }
