@@ -28,6 +28,11 @@ const listingSchema = new Schema({
     //Possiblity to implements a timed listing
     listingTime: {
         type: Date
+    },
+    category: {
+        type: Schema.Types.ObjectId,
+        ref: 'Category',
+        required: true
     }
 });
 
