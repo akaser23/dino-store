@@ -13,8 +13,11 @@ import {
 import { useReducer } from 'react';
 
 export const reducer = (state, action) => {
+    
     switch (action.type) {
+        
         case UPDATE_LISTINGS:
+            console.log(action);
             return {
                 ...state,
                 listings: [...action.listings],
