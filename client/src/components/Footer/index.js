@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import dino from '../../assets/dino.svg';
+// import dino from '../../assets/dino.svg';
 
 function Footer() {
     return (

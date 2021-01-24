@@ -8,7 +8,7 @@ function Header() {
    return (
       <header>
          <div>
-            <h1>Din<img src={dino} />store</h1>
+            <h1>Din<img src={dino} alt="Dinostore Logo"/>store</h1>
          </div>
          <div className="cart-icon"> 
             <Cart />

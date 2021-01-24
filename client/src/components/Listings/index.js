@@ -8,7 +8,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_LISTINGS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
 
-function ListingList() {
+function Listings() {
     const [state, dispatch] = useStoreContext();
   
     const { currentCategory } = state;
@@ -71,4 +71,4 @@ function ListingList() {
     );
   }
   
-  export default ListingList;
+  export default Listings;
