@@ -21,7 +21,7 @@ function Listings() {
       if(data) {
         dispatch({
           type: UPDATE_LISTINGS,
-          listings: data.listing
+          listings: data.listings
         });
         
         data.listings.forEach((listing) => {
