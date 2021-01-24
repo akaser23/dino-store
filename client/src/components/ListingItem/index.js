@@ -6,6 +6,7 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
 import './style.css';
 import { Card } from 'antd';
+import { Button } from 'antd';
 
 function ListingItem(item) {
     const {
@@ -52,13 +53,13 @@ function ListingItem(item) {
                     alt={name}
                     src={`/images/${image}`}
                 />
-                <p>{name}</p>
+                <p className="item-name">{name}</p>
             </Link>
             <div>
                 <div>{quantity} {pluralize("item", quantity)} in stock</div>
                 <span>${price}</span>
             </div>
-            <button onClick={addToCart}>Add to cart</button>
+            <Button type="primary" onClick={addToCart}>Add to cart</Button>
         </Card>
     );
 }
