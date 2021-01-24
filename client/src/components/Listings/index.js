@@ -15,14 +15,15 @@ function Listings() {
     const { currentCategory } = state;
     
     const { loading, data } = useQuery(QUERY_LISTINGS);
-    
+    console.log(data);
     useEffect(() => {
+      
       if(data) {
         dispatch({
           type: UPDATE_LISTINGS,
           listings: data.listing
         });
-    
+        
         data.listings.forEach((listing) => {
           idbPromise('listings', 'put', listing);
         });
