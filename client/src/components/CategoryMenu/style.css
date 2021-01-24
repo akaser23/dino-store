@@ -2,7 +2,11 @@ h2, h3 {
     font-family: 'Acme', sans-serif;
 }
 
-button {
+.category-list {
+    padding-top: 9px;
+}
+
+.category-link {
     color: #58bb53;
     font-family: 'Acme', sans-serif;
     font-size: 17px;
@@ -12,6 +16,6 @@ button {
     justify-content: space-between;
 }
 
-button:hover {
+.category-link:hover {
     text-decoration: underline;
 }

@@ -7,6 +7,7 @@ import spinner from "../../assets/spinner.gif";
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_LISTINGS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
+import './style.css';
 // import { Pagination } from 'antd';
 
 function Listings() {
