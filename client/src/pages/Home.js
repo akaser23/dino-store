@@ -1,12 +1,12 @@
 import React from "react";
+import Listings from "../components/Listings";
 import CategoryMenu from "../components/CategoryMenu";
-import Listings from '../components/Listings';
 
 const Home = () => {
   return (
     <div className="container">
       <CategoryMenu />
-      <Listings/>
+      <Listings />
     </div>
   );
 };

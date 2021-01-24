@@ -6,11 +6,9 @@ import ApolloClient from 'apollo-boost';
 
 import Footer from "./components/Footer";
 import Header from './components/Header';
-import SingleItem from './pages/SingleItem';
-// import NoMatch from "./pages/NoMatch";
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Home from './pages/Home';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -36,7 +34,6 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/listings/:id" component={SingleItem} />
-              {/* <Route component={NoMatch} /> */}
             </Switch>
             <Footer />
           </StoreProvider>

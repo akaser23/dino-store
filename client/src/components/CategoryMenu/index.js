@@ -31,7 +31,6 @@ function CategoryMenu() {
                     type: UPDATE_CATEGORIES,
                     categories: categories
                 });
-                console.log(categories);
             });
         }
     }, [categoryData, loading, dispatch]);
