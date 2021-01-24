@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useQuery } from '../ProductList.js/node_modules/@apollo/react-hooks';
+import { useQuery } from '@apollo/react-hooks';
 import { QUERY_CATEGORIES } from "../../utils/queries";
 import { useStoreContext } from "../../utils/GlobalState";
 
