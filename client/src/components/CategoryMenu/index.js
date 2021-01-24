@@ -20,15 +20,18 @@ function CategoryMenu() {
                 type: UPDATE_CATEGORIES,
                 categories: categoryData.categories
             });
+
             categoryData.categories.forEach(category => {
                 idbPromise('categories', 'put', category);
             });
+            
         } else if (!loading) {
             idbPromise('categories', 'get').then(categories => {
                 dispatch({
                     type: UPDATE_CATEGORIES,
                     categories: categories
                 });
+                console.log(categories);
             });
         }
     }, [categoryData, loading, dispatch]);
