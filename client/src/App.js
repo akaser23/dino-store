@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { StoreProvider } from "./utils/GlobalState";
 import ApolloClient from 'apollo-boost';
@@ -10,8 +11,6 @@ import SingleItem from './pages/SingleItem';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Home from './pages/Home';
-import Listings from './components/Listings';
-import CategoryMenu from './components/CategoryMenu';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -43,14 +42,6 @@ function App() {
           </StoreProvider>
         </div>
       </Router>
-      <div className="App">
-        <Header />
-        <StoreProvider>
-          <CategoryMenu />
-          <Listings />
-        </StoreProvider>
-        <Footer />
-      </div>
     </ApolloProvider>
   );
 }
