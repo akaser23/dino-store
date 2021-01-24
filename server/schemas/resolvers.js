@@ -16,7 +16,7 @@ const resolvers = {
             const params = {};
 
             if (category) {
-                params. category = category;
+                params.category = category;
             }
 
             if (name) {
