@@ -1,0 +1,17 @@
+h2, h3 {
+    font-family: 'Acme', sans-serif;
+}
+
+button {
+    color: #58bb53;
+    font-family: 'Acme', sans-serif;
+    font-size: 17px;
+    border: none;
+    background: #ffffff;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+button:hover {
+    text-decoration: underline;
+}

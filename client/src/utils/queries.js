@@ -69,4 +69,8 @@ query getCheckout($listings: [ID]!) {
         session
     }
 }
+<<<<<<< HEAD
 `;
+=======
+`;
+>>>>>>> main
