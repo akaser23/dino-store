@@ -23,6 +23,9 @@ export const ADD_ORDER = gql`
       price
       quantity
       listingTime
+      category {
+        name
+      }
       }
     }
   }
