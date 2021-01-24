@@ -12,9 +12,21 @@ const resolvers = {
             const users = await User.find();
             return users;
         },
-        listings: async () => {
-            const listings = await Listing.find();
-            return listings;
+        listings: async (parent, { category, name }) => {
+            const params = {};
+
+            if (category) {
+                params. category = category;
+            }
+
+            if (name) {
+                params.name = {
+                    $regex: name
+                };
+            }
+
+            return await
+            Listing.find(params).populate('category');
         },
         listing: async (parent, { _id }) => {
             return await Listing.findById(_id);

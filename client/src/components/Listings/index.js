@@ -7,6 +7,7 @@ import spinner from "../../assets/spinner.gif";
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_LISTINGS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
+// import { Pagination } from 'antd';
 
 function Listings() {
     const [state, dispatch] = useStoreContext();
@@ -63,10 +64,11 @@ function Listings() {
               ))}
           </div>
         ) : (
-          <h3>You haven't added any listings yet!</h3>
+          <h3>No current listings.</h3>
         )}
         { loading ? 
         <img src={spinner} alt="loading" />: null}
+        {/* <Pagination defaultCurrent={1} total={50} /> */}
       </div>
     );
   }
