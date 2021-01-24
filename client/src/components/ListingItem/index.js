@@ -4,6 +4,8 @@ import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
+import './style.css';
+import { Card } from 'antd';
 
 function ListingItem(item) {
     const {
@@ -40,7 +42,11 @@ function ListingItem(item) {
     };
 
     return (
-        <div className="card px-1 py-1">
+        <Card
+        className="listing"
+        hoverable
+        style={{ width:240 }}
+        >
             <Link to={`/listings/${_id}`}>
                 <img
                     alt={name}
@@ -53,7 +59,7 @@ function ListingItem(item) {
                 <span>${price}</span>
             </div>
             <button onClick={addToCart}>Add to cart</button>
-        </div>
+        </Card>
     );
 }
 
