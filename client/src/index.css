@@ -12,3 +12,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+.login-container label {
+  visibility: hidden;
+  position: absolute;
+}
+
+.login-container input, .login-container button {
+  border-radius: 5px;
+  padding: 2px;
+  margin: 2px;
+}
