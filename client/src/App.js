@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import SingleItem from './pages/SingleItem';
 
 const client = new ApolloClient({
   request: (operation) => {
