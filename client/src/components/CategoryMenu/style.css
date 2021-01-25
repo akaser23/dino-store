@@ -4,6 +4,9 @@ h2, h3 {
 
 .category-list {
     padding: 9px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .category-link {
@@ -14,8 +17,10 @@ h2, h3 {
     background: #ffffff;
     display: inline-block;
     justify-content: space-between;
+
 }
 
 .category-link:hover {
     text-decoration: underline;
+    cursor: pointer;
 }

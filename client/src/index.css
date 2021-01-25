@@ -19,6 +19,12 @@ code {
   padding-top: 3em;
 }
 
+.home-container {
+  display: flex;
+  justify-content:center;
+  padding-top: 1em;
+}
+
 .login-container label, .signup-container label {
   visibility: hidden;
   position: absolute;
