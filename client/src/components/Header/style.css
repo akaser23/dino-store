@@ -2,6 +2,7 @@ header {
    padding: 0 4em;
    background-color: #6EC5C1;
    box-shadow: 0px 0px 10px black;
+   transition: all .2s;
 }
 .header-top {
    display: flex;
@@ -19,6 +20,7 @@ header {
    white-space: nowrap;
    color: #58bb53;
    font-weight: bold;
+   transition: all .2s;
 }
 
 .logo-img {
@@ -37,15 +39,18 @@ header {
 @media only screen and (max-width: 600px) {
    header {
       padding: 0;
+      transition: all .2s;
    }
    .site-logo {
       font-size: 5em;
+      transition: all .2s;
    }
 }
 
 @media only screen and (max-width: 330px) {
    .site-logo {
       font-size: 4em;
+      transition: all .2s;
    }
 }
 

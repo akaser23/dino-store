@@ -21,7 +21,7 @@ function Profile() {
 
    return (
       <>
-         <div className="container">
+         <div className="profile-container">
             {user ? (
                <>
                   <h2>Order History for {user.firstName} {user.lastName}</h2>
@@ -59,12 +59,12 @@ function Profile() {
                   ))}
                </>
             ) : (
-                  <>
+                  <div className="blank-orders">
                      Yikes, it looks like you haven't ordered anything. You can fix that here:
                      <Link to="/">
                         <p>← Back to listings</p>
                      </Link>
-                  </>
+                  </div>
                )}
 
          </div>

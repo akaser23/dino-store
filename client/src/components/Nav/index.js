@@ -26,6 +26,12 @@ function Nav() {
                <Link to="/login">
                   Login
                </Link>
+               <Link to="/Profile">
+                  Order History
+               </Link>
+               <a href="/" onClick={() => Auth.logout()}>
+                  Logout
+               </a>
             </>
          );
       }
