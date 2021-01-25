@@ -4,6 +4,9 @@ import { pluralize } from "../../utils/helpers";
 import { useStoreContext } from '../../utils/GlobalState';
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
+import './style.css';
+import { Card } from 'antd';
+import { Button } from 'antd';
 
 function ListingItem(item) {
     const {
@@ -40,20 +43,24 @@ function ListingItem(item) {
     };
 
     return (
-        <div className="card px-1 py-1">
+        <Card
+        className="listing"
+        hoverable
+        style={{ width:240 }}
+        >
             <Link to={`/listings/${_id}`}>
                 <img
                     alt={name}
                     src={`/images/${image}`}
                 />
-                <p>{name}</p>
+                <p className="item-name">{name}</p>
             </Link>
             <div>
                 <div>{quantity} {pluralize("item", quantity)} in stock</div>
                 <span>${price}</span>
             </div>
-            <button onClick={addToCart}>Add to cart</button>
-        </div>
+            <Button type="primary" onClick={addToCart}>Add to cart</Button>
+        </Card>
     );
 }
 
