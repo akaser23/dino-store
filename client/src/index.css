@@ -12,3 +12,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.login-container, .signup-container, .profile-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+.home-container {
+  display: flex;
+  justify-content:center;
+  padding-top: 1em;
+}
+
+.login-container label, .signup-container label {
+  visibility: hidden;
+  position: absolute;
+}
+
+.login-container input, .login-container button, .signup-container input, .signup-container button {
+  border-radius: 5px;
+  padding: 2px;
+  margin: 2px;
+}
+
+.blank-orders {
+  font-size: 2em;
+}
