@@ -50,6 +50,7 @@ function ListingItem(item) {
         >
             <Link to={`/listings/${_id}`}>
                 <img
+                    className= "item-image"
                     alt={name}
                     src={`/images/${image}`}
                 />
