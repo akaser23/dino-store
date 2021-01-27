@@ -23,3 +23,7 @@
     background-color: #6EC5C1;
     border-color: #6EC5C1;
 }
+
+.item-image {
+    max-width: 200px;
+}
