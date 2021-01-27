@@ -17,5 +17,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  transition: all .2s;
+}
+
+.listing-title{
+  padding-left: 2%;
 }

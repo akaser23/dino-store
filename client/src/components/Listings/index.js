@@ -50,7 +50,7 @@ function Listings() {
 
   return (
     <div>
-      <h2>Get your Dino-mite gear here:</h2>
+      <h2 className="listing-title">Get your Dino-mite gear here:</h2>
       {state.listings.length ? (
         <div className="listing-container">
           {filterListings().map(listing => (
