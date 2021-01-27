@@ -39,3 +39,38 @@ code {
 .blank-orders {
   font-size: 2em;
 }
+
+.ant-btn-primary {
+  background-color: #58bb53;
+  border-color:  #58bb53;
+}
+
+.ant-btn-primary:hover {
+  background-color: #6EC5C1;
+  border-color: #6EC5C1;
+}
+
+.item-title{
+  font-size: 2.5em;
+  color: #1890FF;
+  -webkit-text-stroke: 1px black;
+  margin: 10px 10px;
+}
+
+.item-description{
+  color: black;
+  font-size: 1.5em;
+  -webkit-text-stroke: #1890FF .5px;
+}
+
+.item-price{
+  color: black;
+  font-size: 1em;
+  -webkit-text-stroke: #1890FF .25px;
+}
+
+.item-img{
+  max-height: 45vh;
+  border: solid 1px #175914;
+  margin-left: 50px;
+}
