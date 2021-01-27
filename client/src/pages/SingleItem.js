@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_LISTINGS } from "../utils/queries";
-import spinner from '../assets/spinner.gif'
+import { Spin } from 'antd';
 import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_LISTINGS, REMOVE_FROM_CART, UPDATE_CART_QUANTITY, ADD_TO_CART } from '../utils/actions';
 import Cart from '../components/Cart';
@@ -82,7 +82,7 @@ function SingleItem() {
   return (
     <>
       {currentListing ? (
-        <div className="container my-1">
+        <div>
           <Link className="back-link" to="/">
             ← Back to Listings
           </Link>
@@ -116,7 +116,7 @@ function SingleItem() {
         </div>
       ) : null}
       {
-        loading ? <img src={spinner} alt="loading" /> : null
+        loading ? <Spin className="spinner"/> : null
       }
       <Cart />
     </>
