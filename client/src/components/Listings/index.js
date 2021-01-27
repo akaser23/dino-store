@@ -3,7 +3,6 @@ import { useQuery } from '@apollo/react-hooks';
 
 import ListingItem from "../ListingItem";
 import { QUERY_LISTINGS } from "../../utils/queries";
-// import spinner from "../../assets/spinner.gif";
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_LISTINGS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
@@ -16,7 +15,7 @@ function Listings() {
   const { currentCategory } = state;
 
   const { loading, data } = useQuery(QUERY_LISTINGS);
-  console.log(data);
+  if(!loading) console.log(data);
   useEffect(() => {
 
     if (data) {
@@ -50,10 +49,10 @@ function Listings() {
   }
 
   return (
-    <div className="my-2">
-      <h2>Get your Dino-mite gear here:</h2>
+    <div>
+      <h2 className="listing-title">Get your Dino-mite gear here:</h2>
       {state.listings.length ? (
-        <div className="flex-row">
+        <div className="listing-container">
           {filterListings().map(listing => (
             <ListingItem
               key={listing._id}

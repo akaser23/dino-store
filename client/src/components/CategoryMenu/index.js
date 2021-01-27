@@ -50,7 +50,8 @@ function CategoryMenu() {
                 <button
                     className="category-link"
                     key={item._id}
-                    onClick={() => {
+                    onClick={(e) => {
+                        e.preventDefault();
                         handleClick(item._id);
                     }}
                 >
