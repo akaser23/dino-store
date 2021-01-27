@@ -13,11 +13,14 @@ import {
 import { useReducer } from 'react';
 
 export const reducer = (state, action) => {
+    
     switch (action.type) {
+        
         case UPDATE_LISTINGS:
+            console.log(action);
             return {
                 ...state,
-                listings: [...action.products],
+                listings: [...action.listings],
             };
 
         case UPDATE_CATEGORIES:
@@ -36,18 +39,18 @@ export const reducer = (state, action) => {
             return {
                 ...state,
                 cartOpen: true,
-                cart: [...state.cart, action.product]
+                cart: [...state.cart, action.listing]
             };
 
         case ADD_MULTIPLE_TO_CART:
             return {
                 ...state,
-                cart: [...state.cart, ...action.products],
+                cart: [...state.cart, ...action.listings],
             };
 
         case REMOVE_FROM_CART:
-            let newState = state.cart.filter(product => {
-                return product._id !== action._id;
+            let newState = state.cart.filter(listing => {
+                return listing._id !== action._id;
             });
 
             return {
