@@ -14,7 +14,12 @@
    "author": "",
    "license": "ISC",
    "dependencies": {
-      "if-env": "^1.0.4"
+      "apollo-boost": "^0.4.9",
+      "apollo-link-context": "^1.0.20",
+      "graphql": "^15.4.0",
+      "graphql-tag": "^2.11.0",
+      "if-env": "^1.0.4",
+      "react-router-dom": "^5.2.0"
    },
    "devDependencies": {
       "concurrently": "^5.1.0"
