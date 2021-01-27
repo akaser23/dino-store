@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+/* @import '~antd/dist/antd.css'; */
 
 .spin-container {
     text-align: center;
@@ -11,4 +11,11 @@
 
 .spinner {
     color: #58bb53;
+}
+
+.listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  transition: all .2s;
 }
