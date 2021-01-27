@@ -6,9 +6,9 @@ query getListings($category: ID) {
         _id
         name
         description
+        image
         price
         quantity
-        listingTime
         category {
             _id
         }
@@ -22,9 +22,9 @@ export const QUERY_ALL_LISTINGS = gql`
             _id
             name
             description
+            image
             price
             quantity
-            listingTime
             category {
                 name
             }
@@ -56,7 +56,6 @@ export const QUERY_USER = gql`
             description
             price
             quantity
-            listingTime
             }
         }
     }

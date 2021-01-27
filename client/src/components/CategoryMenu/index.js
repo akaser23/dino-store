@@ -31,7 +31,6 @@ function CategoryMenu() {
                     type: UPDATE_CATEGORIES,
                     categories: categories
                 });
-                console.log(categories);
             });
         }
     }, [categoryData, loading, dispatch]);
@@ -45,11 +44,11 @@ function CategoryMenu() {
     // const categories = categoryData?.categories || [];
 
     return (
-        <div>
-            <h2>Choose a Category:</h2>
+        <div className="category-list">
+            {/* <h2>Choose a Category:</h2> */}
             {categories.map(item => (
                 <button
-                    // type="link"
+                    className="category-link"
                     key={item._id}
                     onClick={() => {
                         handleClick(item._id);
