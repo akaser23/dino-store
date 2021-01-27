@@ -83,7 +83,7 @@ function SingleItem() {
     <>
       {currentListing ? (
         <div className="container my-1">
-          <Link to="/">
+          <Link className="back-link" to="/">
             ← Back to Listings
           </Link>
 
@@ -109,6 +109,7 @@ function SingleItem() {
           </p>
 
           <img
+            className="item-img"
             src={`/images/${currentListing.image}`}
             alt={currentListing.name}
           />

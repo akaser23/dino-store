@@ -51,16 +51,26 @@ code {
 }
 
 .item-title{
-  font-size: xx-large;
+  font-size: 2.5em;
   color: #1890FF;
+  -webkit-text-stroke: 1px black;
+  margin: 10px 10px;
 }
 
 .item-description{
   color: black;
-  font-size: large;
+  font-size: 1.5em;
+  -webkit-text-stroke: #1890FF .5px;
 }
 
 .item-price{
   color: black;
-  font-size: large;
+  font-size: 1em;
+  -webkit-text-stroke: #1890FF .25px;
+}
+
+.item-img{
+  max-height: 45vh;
+  border: solid 1px #175914;
+  margin-left: 50px;
 }
