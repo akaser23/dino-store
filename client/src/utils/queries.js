@@ -6,6 +6,7 @@ query getListings($category: ID) {
         _id
         name
         description
+        image
         price
         quantity
         category {
@@ -21,6 +22,7 @@ export const QUERY_ALL_LISTINGS = gql`
             _id
             name
             description
+            image
             price
             quantity
             category {
