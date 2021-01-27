@@ -5,6 +5,11 @@ export function pluralize(name, count) {
   return name + 's'
 }
 
+export function validatePass(password) {
+  var re = /^.{6,}$/;
+  return re.test(String(password));
+}
+
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
     // open connection to the database `shop-shop` with the version of 1
