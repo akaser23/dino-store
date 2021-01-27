@@ -6,12 +6,11 @@ import ApolloClient from 'apollo-boost';
 
 import Footer from "./components/Footer";
 import Header from './components/Header';
-// import Listings from './components/Listings';
-// import CategoryMenu from './components/CategoryMenu';
 import Profile from './pages/Profile';
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import SingleItem from './pages/SingleItem';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -31,17 +30,17 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="App">
-          <Header />
+        <div>
           <StoreProvider>
+            <Header />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
-              <Route exact path="/Signup" component={Signup} />
-              <Route exact path="/Profile" component={Profile} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/listings/:id" component={SingleItem} />
             </Switch>
+            <Footer />
           </StoreProvider>
-          <Footer />
         </div>
       </Router>
     </ApolloProvider>
