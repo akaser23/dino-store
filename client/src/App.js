@@ -6,8 +6,6 @@ import ApolloClient from 'apollo-boost';
 
 import Footer from "./components/Footer";
 import Header from './components/Header';
-// import Listings from './components/Listings';
-// import CategoryMenu from './components/CategoryMenu';
 import Profile from './pages/Profile';
 import Home from "./pages/Home";
 import Login from "./pages/Login";

@@ -7,6 +7,7 @@ import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_LISTINGS, REMOVE_FROM_CART, UPDATE_CART_QUANTITY, ADD_TO_CART } from '../utils/actions';
 import Cart from '../components/Cart';
 import { idbPromise } from '../utils/helpers';
+import { Button } from "antd";
 
 function SingleItem() {
   const [state, dispatch] = useStoreContext();
@@ -86,25 +87,25 @@ function SingleItem() {
             ← Back to Listings
           </Link>
 
-          <h2>{currentListing.name}</h2>
+          <h2 className="item-title">{currentListing.name}</h2>
 
-          <p>
+          <p className="item-description">
             {currentListing.description}
           </p>
 
           <p>
-            <strong>Price:</strong>
+            <strong className="item-price">Price: </strong>
             ${currentListing.price}
             {" "}
-            <button onClick={addToCart}>
+            <Button type="primary" onClick={addToCart}>
               Add to Cart
-            </button>
-            <button
+            </Button>
+            <Button type="primary"
               disabled={!cart.find(p => p._id === currentListing._id)}
               onClick={removeFromCart}
             >
               Remove from Cart
-            </button>
+            </Button>
           </p>
 
           <img

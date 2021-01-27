@@ -39,3 +39,28 @@ code {
 .blank-orders {
   font-size: 2em;
 }
+
+.ant-btn-primary {
+  background-color: #58bb53;
+  border-color:  #58bb53;
+}
+
+.ant-btn-primary:hover {
+  background-color: #6EC5C1;
+  border-color: #6EC5C1;
+}
+
+.item-title{
+  font-size: xx-large;
+  color: #1890FF;
+}
+
+.item-description{
+  color: black;
+  font-size: large;
+}
+
+.item-price{
+  color: black;
+  font-size: large;
+}
