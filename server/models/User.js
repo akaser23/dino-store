@@ -26,7 +26,7 @@ const userSchema = new Schema({
         required: true,
         minlength: 6
     },
-    orders: [Order.Schema],
+    orders: [Order.schema],
     // listings: [Listing.schema]
 });
 
