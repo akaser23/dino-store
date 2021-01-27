@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useMutation } from '@apollo/react-hooks';
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
+import { validatePass } from '../utils/helpers';
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [addUser] = useMutation(ADD_USER);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleFormSubmit = async event => {
     event.preventDefault();
@@ -21,10 +23,26 @@ function Signup(props) {
 
   const handleChange = event => {
     const { name, value } = event.target;
+
     setFormState({
       ...formState,
       [name]: value
     });
+
+    if (event.target.name === 'password') {
+      const isValid = validatePass(event.target.value);
+      if (!isValid) {
+        setErrorMessage('Your password must be at least 6 characters.');
+      } else {
+        setErrorMessage('');
+      }
+    } else {
+      if (!event.target.value.length) {
+        setErrorMessage(`${event.target.name} is required.`);
+      } else {
+        setErrorMessage('');
+      }
+    }
   };
 
   return (
@@ -73,6 +91,11 @@ function Signup(props) {
             />
           </div>
           <div className="flex-row flex-end">
+            {errorMessage && (
+              <div>
+                <p className="error-text">{errorMessage}</p>
+              </div>
+            )}
             <button type="submit">
               Submit
           </button>

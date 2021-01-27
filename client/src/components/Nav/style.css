@@ -11,5 +11,6 @@
    font-size: 1.5em;
    font-weight: bold;
    -webkit-text-stroke: 1px #175914;
+   text-shadow: #175914 2px 2px 2px;
 }
 

@@ -17,10 +17,11 @@ h2, h3 {
     background: #ffffff;
     display: inline-block;
     justify-content: space-between;
-
+    text-shadow: #175914 1px 1px 1px;
 }
 
 .category-link:hover {
     text-decoration: underline;
     cursor: pointer;
+    text-shadow: none;
 }

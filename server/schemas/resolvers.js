@@ -46,24 +46,23 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
         },
         checkout: async (parent, args, context) => {
-            const order = new Order({ products: args.products });
-            const { products } = await order.populate('products').execPopulate();
+            const order = new Order({ listings: args.listings });
+            const { listings } = await order.populate('listing').execPopulate();
             const url = new URL(context.headers.referer).origin;
-
             const line_items = [];
 
-            for (let i = 0; i < products.length; i++) {
+            for (let i = 0; i < listings.length; i++) {
                 // generate product id
-                const product = await stripe.products.create({
-                    name: products[i].name,
-                    description: products[i].description,
-                    images: [`${url}/images/${products[i].image}`]
+                const listing = await stripe.listings.create({
+                    name: listings[i].name,
+                    description: listings[i].description,
+                    images: [`${url}/images/${listings[i].image}`]
                 });
 
                 // generate price id using the product id
                 const price = await stripe.prices.create({
-                    product: product.id,
-                    unit_amount: products[i].price * 100,
+                    listing: listing.id,
+                    unit_amount: listings[i].price * 100,
                     currency: 'usd',
                 });
 

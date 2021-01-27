@@ -21,10 +21,11 @@ header {
    color: #58bb53;
    font-weight: bold;
    transition: all .2s;
+   text-shadow: #175914 4px 4px 4px;
 }
 
 .logo-img {
-   width: 20%;
+   width: 15%;
    vertical-align: inherit;
 }
 
