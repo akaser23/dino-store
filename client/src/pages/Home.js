@@ -4,9 +4,11 @@ import CategoryMenu from "../components/CategoryMenu";
 
 const Home = () => {
   return (
-    <div className="container">
-      <CategoryMenu />
-      <Listings />
+    <div className="home-container">
+      <div>
+        <CategoryMenu />
+        <Listings />
+      </div>
     </div>
   );
 };

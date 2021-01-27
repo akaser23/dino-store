@@ -1,0 +1,15 @@
+.header-nav {
+   display: flex;
+   justify-content: space-around;
+   padding-bottom: 1em;
+   margin-top: .5em;
+}
+
+.header-nav a {
+   color: #58bb53;
+   text-decoration: none;
+   font-size: 1.5em;
+   font-weight: bold;
+   -webkit-text-stroke: 1px #175914;
+}
+

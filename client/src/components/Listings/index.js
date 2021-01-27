@@ -51,7 +51,7 @@ function Listings() {
 
   return (
     <div className="my-2">
-      <h2>Our Listings:</h2>
+      <h2>Get your Dino-mite gear here:</h2>
       {state.listings.length ? (
         <div className="flex-row">
           {filterListings().map(listing => (
