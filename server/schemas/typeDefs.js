@@ -46,7 +46,7 @@ const typeDefs = gql`
         listings(category: ID, name: String): [Listing]
         listing(_id: ID!): Listing
         order(_id: ID!): Order
-        checkout(listings: [ID!]): Checkout
+        checkout(listings: [ID]!): Checkout
     }
 
     type Mutation {
