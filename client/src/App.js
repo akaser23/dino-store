@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import SingleItem from './pages/SingleItem';
+import Success from './pages/Success';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -39,6 +40,7 @@ function App() {
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/listings/:id" component={SingleItem} />
+              <Route exact path="/success" component={Success} />
             </Switch>
             <Footer />
           </StoreProvider>

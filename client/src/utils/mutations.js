@@ -22,7 +22,6 @@ export const ADD_ORDER = gql`
       image
       price
       quantity
-      listingTime
       category {
         name
       }
