@@ -52,7 +52,7 @@ db.once('open', async () => {
         },
         {
             name: 'Dino Ball',
-            description: 'A soccer ball with dinos.',
+            description: 'A soccer ball for T-Rex7.',
             image: 'ball.jpg',
             category: categories[4]._id,
             price: 25.99,
@@ -63,6 +63,76 @@ db.once('open', async () => {
             image: 'plate.jpg',
             category: categories[5]._id,
             price: 10.99,
+            quantity: 1
+        }, {
+            name: 'Dino Book',
+            description: 'Read your favorite Valentine, a dino book!',
+            image: 'book.jpg',
+            category: categories[3]._id,
+            price: 7.99,
+            quantity: 1
+        }, {
+            name: 'Dino Encyclopedia',
+            description: 'Marvel with the pop-up dino encyclopedia!',
+            image: 'encyc.jpg',
+            category: categories[3]._id,
+            price: 19.99,
+            quantity: 1
+        }, {
+            name: 'Dino Waffle Iron',
+            description: "What's for breakfast? Waffle-shaped dinosaurs!",
+            image: 'waffles.jpg',
+            category: categories[1]._id,
+            price: 44.99,
+            quantity: 1
+        }, {
+            name: 'Dino Race Track',
+            description: 'Race your favorite toy car on this dino race track!',
+            image: 'racetrack.jpg',
+            category: categories[2]._id,
+            price: 27.99,
+            quantity: 1
+        }, {
+            name: 'Dino Jumpsuit',
+            description: 'Go to every outing, roaring!',
+            image: 'jumpsuit.jpg',
+            category: categories[0]._id,
+            price: 32.99,
+            quantity: 1
+        }, {
+            name: 'Dino Statue',
+            description: 'Scare the neighbors away with this dino statue!',
+            image: 'statue.jpg',
+            category: categories[1]._id,
+            price: 154.99,
+            quantity: 1
+        }, {
+            name: 'Dino Ride',
+            description: 'Get ready to ride a dino!',
+            image: 'dinoride.jpg',
+            category: categories[2]._id,
+            price: 99.99,
+            quantity: 1
+        }, {
+            name: 'Dino Textbook',
+            description: "Learn the A-Z's about dinos!",
+            image: 'textbook.jpg',
+            category: categories[3]._id,
+            price: 75.99,
+            quantity: 1
+        }, {
+            name: 'Dino Lego',
+            description: 'Build a dino of your own!',
+            image: 'lego.jpg',
+            category: categories[4]._id,
+            price: 12.99,
+            quantity: 1
+        }, {
+            name: 'Dino Candy',
+            description: 'Enjoy these dino candies!',
+            image: 'candy.jpg',
+            category: categories[5]._id,
+            price: 2.99,
             quantity: 1
         }
     ]);

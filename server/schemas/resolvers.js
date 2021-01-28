@@ -36,7 +36,7 @@ const resolvers = {
         order: async (parent, { _id }, context) => {
             if (context.user) {
                 const user = await User.findById(context.user._id).populate({
-                    path: 'orders.products',
+                    path: 'orders.listings',
                     populate: 'category'
                 });
 
@@ -46,24 +46,29 @@ const resolvers = {
             throw new AuthenticationError('Not logged in');
         },
         checkout: async (parent, args, context) => {
-            const order = new Order({ products: args.products });
-            const { products } = await order.populate('products').execPopulate();
+            const order = new Order({ listings: args.listings });
+            const { listings } = await order.populate('listings').execPopulate();
             const url = new URL(context.headers.referer).origin;
-
             const line_items = [];
 
-            for (let i = 0; i < products.length; i++) {
+            // console.log(listings.length);
+
+            for (let i = 0; i < listings.length; i++) {
                 // generate product id
-                const product = await stripe.products.create({
-                    name: products[i].name,
-                    description: products[i].description,
-                    images: [`${url}/images/${products[i].image}`]
+                console.log(listings[i].name, listings[i].description, listings[i].image);
+
+                const listing = await stripe.products.create({
+                    name: listings[i].name,
+                    description: listings[i].description,
+                    images: [`${url}/images/${listings[i].image}`]
                 });
+
+                
 
                 // generate price id using the product id
                 const price = await stripe.prices.create({
-                    product: product.id,
-                    unit_amount: products[i].price * 100,
+                    product: listing.id,
+                    unit_amount: listings[i].price * 100,
                     currency: 'usd',
                 });
 
