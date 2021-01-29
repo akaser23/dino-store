@@ -30,6 +30,20 @@ const resolvers = {
             return await
                 Listing.find(params).populate('category');
         },
+        user: async (parent, args, context) => {
+            if (context.user) {
+                const user = await User.findById(context.user._id).populate({
+                    path: 'orders.listings',
+                    populate: 'category'
+                });
+
+                user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+
+                return user;
+            }
+
+            throw new AuthenticationError('Not logged in');
+        },
         listing: async (parent, { _id }) => {
             return await Listing.findById(_id);
         },
@@ -63,7 +77,7 @@ const resolvers = {
                     images: [`${url}/images/${listings[i].image}`]
                 });
 
-                
+
 
                 // generate price id using the product id
                 const price = await stripe.prices.create({

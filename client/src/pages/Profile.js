@@ -11,7 +11,6 @@ function Profile() {
 
 
    const { data } = useQuery(QUERY_USER);
-   console.log(data);
    let user;
 
    if (data) {
@@ -23,41 +22,39 @@ function Profile() {
       <>
          <div className="profile-container">
             {user ? (
-               <>
-                  <h2>Order History for {user.firstName} {user.lastName}</h2>
+               <div>
+                  <h2>Order History for {user.firstName} {user.lastName}:</h2>
+                  <div>
                   {user.orders.map((order) => (
                      <div key={order._id}>
                         <h3>Date Ordered: {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</h3>
-                        <div className="flex-row">
-                           {order.listings.map(({ _id, image, name, price }, index) => (
-                              <Card
-                                 hoverable
-                                 style={{ width: 240 }}
-                                 cover={<img alt="example" src="https://via.placeholder.com/150C/O%20https://placeholder.com/" />}
-                              >
-                                 <Meta title="ProductName" description={() => {
-                                    return (
-                                       <div key={index}>
-                                          <Link to={`/listings/${_id}`}>
-                                             <img
-                                                alt={name}
-                                                src={`/images/${image}`}
-                                             />
-                                             <p>{name}</p>
-                                          </Link>
-                                          <div>
-                                             <span>${price}</span>
-                                          </div>
-                                       </div>
-                                    );
-                                 }
-                                 } className="product-card" />
-                              </Card>
-                           ))}
+                        <div>
+                           <ul className="orders-list">
+                              {order.listings.map(({ _id, image, name, price }, index) => (
+                                 <li key={index}>
+                                    <Link to={`/listings/${_id}`}>
+                                       <Card
+                                          hoverable
+                                          style={{ width: 240 }}
+                                          cover={<img alt="example" src={`images/${image}`} />}
+                                       >
+                                          <Meta title={name} description={(
+                                             <div>
+                                                <div>
+                                                   <span>${price}</span>
+                                                </div>
+                                             </div>)
+                                          } className="product-card" />
+                                       </Card>
+                                    </Link>
+                                 </li>
+                              ))}
+                           </ul>
                         </div>
                      </div>
                   ))}
-               </>
+                  </div>
+               </div>
             ) : (
                   <div className="blank-orders">
                      Yikes, it looks like you haven't ordered anything. You can fix that here:
