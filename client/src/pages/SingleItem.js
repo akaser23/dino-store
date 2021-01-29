@@ -5,7 +5,6 @@ import { QUERY_LISTINGS } from "../utils/queries";
 import { Spin } from 'antd';
 import { useStoreContext } from '../utils/GlobalState';
 import { UPDATE_LISTINGS, REMOVE_FROM_CART, UPDATE_CART_QUANTITY, ADD_TO_CART } from '../utils/actions';
-import Cart from '../components/Cart';
 import { idbPromise } from '../utils/helpers';
 import { Button } from "antd";
 
@@ -118,7 +117,6 @@ function SingleItem() {
       {
         loading ? <Spin className="spinner"/> : null
       }
-      <Cart />
     </>
   );
 };
