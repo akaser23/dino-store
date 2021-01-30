@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Dino-Store
+## Description
+This application is for a e-comerce store that is catered to dinosaur themed items.  A user is able to create an account, login/logout of the account.  If a user is not logged in they are able to view products.  If a user is logged in they are able to view products and also add and remove items from their cart.  Once they are ready they are directed to a Stripe site to collect and process payment information.  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Languages / Packages
+* Node.js
+* React
+* HTML
+* CSS
+* Bootstrap
+* MongoDB
 
-## Available Scripts
+## NPM Packages
+* @apollo/react-host
+* @stripe/stripe-js
+* antd
+* apollo-boost
+* apollo-server-express
+* bcrypt
+* express
+* graphql
+* graphql-tab
+* jsonwebtoken
+* jwt-decode
+* mongoose
+* react
+* stripe
+* web-vitals
 
-In the project directory, you can run:
+## Installation
+Clone the repo to the desired directory and then run npm i to install all dependicies.  Then run 'npm start' and the application will start up both servers.
+You can also deploy this application to Herko.
 
-### `npm start`
+Demo Site:  https://ancient-lake-97986.herokuapp.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## License
+ISC License
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Contributors
+### Front End
+Anna Kaser        - Developer - https://github.com/akaser23
+Josh Miller       - Developer - https://github.com/OneCrinkleyFry
+Jordan Roberts    - Developer - https://github.com/jdrobs19
 
-### `npm test`
+### Back End
+* Jordan Carver   - Developer - https://github.com/1jorcarver
+* Jaydon Goodrich - Developer - https://github.com/Jaydon-Goodrich
+* Jacob Wilde     - Developer - https://github.com/jacobwilde378
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Questions
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please direct any questions to a contributor using their provided github link.  Links can be found under the Contributors section.  
