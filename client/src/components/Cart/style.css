@@ -71,11 +71,24 @@
   
   @media screen and (max-width: 768px) {
     .cart {
-      position: relative;
       max-width: 100%;
       max-height: auto;
       box-shadow: none;
-      background-color: inherit;
+      background-color: white;
+    }
+  
+    .cart-closed {
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cart {
+      max-width: 100%;
+      max-height: auto;
+      box-shadow: none;
+      background-color: white;
     }
   
     .cart-closed {
