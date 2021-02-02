@@ -47,6 +47,9 @@ Jordan Roberts    - Developer - https://github.com/jdrobs19
 * Jaydon Goodrich - Developer - https://github.com/Jaydon-Goodrich
 * Jacob Wilde     - Developer - https://github.com/jacobwilde378
 
+## Screen Gif
+![alt-text](https://github.com/akaser23/dino-store/blob/feature/screen-gif/Dinostore.gif?raw=true)
+
 ## Questions
 
 Please direct any questions to a contributor using their provided github link.  Links can be found under the Contributors section.  
